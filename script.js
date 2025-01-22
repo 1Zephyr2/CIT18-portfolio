@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Initialize the typing animation
-  const nameArray = ["Your Name"] // Replace with your actual name
+  const nameArray = ["Lei Joshua P. Guevarra"] // Replace with your actual name
   startTextAnimation(nameArray, 0)
 })
 

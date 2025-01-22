@@ -1,9 +1,9 @@
 :root {
   --bg-color: #f8f9fa;
-  --text-color: #212529;
-  --primary-color: #6c63ff;
-  --secondary-color: #4a4e69;
-  --accent-color: #ff6b6b;
+  --text-color: #333333;
+  --primary-color: #2c7da0;
+  --secondary-color: #468faf;
+  --accent-color: #61a5c2;
   --card-bg: #ffffff;
   --border-color: #dee2e6;
 }
@@ -101,57 +101,40 @@ h2 {
   padding: 4rem 0;
 }
 
-.cta-button {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: background-color 0.3s, transform 0.3s;
-  margin-top: 1rem;
-}
-
-.cta-button:hover {
-  background-color: var(--secondary-color);
-  transform: translateY(-3px);
-}
-
-.education-container,
-.experience-container {
+.education-container, .experience-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-.education-item,
-.experience-item {
+.education-item, .experience-item {
   background-color: var(--card-bg);
   border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  text-align: center;
 }
 
-.education-item:hover,
-.experience-item:hover {
-  transform: translateY(-5px);
-}
-
-.education-item h3,
-.experience-item h3 {
+.education-item h3, .experience-item h3 {
   color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
-.education-item p,
-.experience-item p {
+.education-item p, .experience-item p {
   margin-bottom: 0.5rem;
 }
 
 .experience-item ul {
   list-style-type: none;
-  padding-left: 1rem;
+  padding-left: 0;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.experience-item ul li {
+  text-align: left;
 }
 
 .experience-item ul li::before {
@@ -159,7 +142,7 @@ h2 {
   color: var(--primary-color);
   display: inline-block;
   width: 1em;
-  margin-left: -1em;
+  margin-right: 0.5em;
 }
 
 .skills-container {
@@ -228,15 +211,17 @@ h2 {
   border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 form {
   display: grid;
   gap: 1rem;
+  padding: 1rem;
 }
 
-input,
-textarea {
+input, textarea {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid var(--border-color);
@@ -261,27 +246,18 @@ button[type="submit"]:hover {
   transform: translateY(-3px);
 }
 
-footer {
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 4rem;
-}
-
 /* Dark mode styles */
 body.dark-mode {
   --bg-color: #121212;
   --text-color: #e0e0e0;
+  --primary-color: #61a5c2;
+  --secondary-color: #89c2d9;
+  --accent-color: #a9d6e5;
   --card-bg: #1e1e1e;
   --border-color: #333333;
 }
 
-body.dark-mode .skill,
-body.dark-mode .project,
-body.dark-mode #contact,
-body.dark-mode .education-item,
-body.dark-mode .experience-item {
+body.dark-mode .skill, body.dark-mode .project, body.dark-mode #contact, body.dark-mode .education-item, body.dark-mode .experience-item {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -314,8 +290,7 @@ body.dark-mode textarea {
     font-size: 2rem;
   }
 
-  .education-container,
-  .experience-container {
+  .education-container, .experience-container {
     grid-template-columns: 1fr;
   }
 }
@@ -341,4 +316,3 @@ body.dark-mode textarea {
   letter-spacing: 0.15em;
   animation: blink 0.7s step-end infinite;
 }
-
