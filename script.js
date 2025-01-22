@@ -79,4 +79,3 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameArray = ["Lei Joshua P. Guevarra"] // Replace with your actual name
   startTextAnimation(nameArray, 0)
 })
-
